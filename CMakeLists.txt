@@ -14,5 +14,6 @@ find_package(Boost 1.55.0 REQUIRED COMPONENTS system filesystem)
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} ${Boost_INCLUDE_DIRS})
 ADD_EXECUTABLE(main main.cpp)
+ADD_EXECUTABLE(client_pb client_pb.cpp)
 link_directories(${Boost_LIBRARY_DIRS})
 TARGET_LINK_LIBRARIES(main proto ${PROTOBUF_LIBRARY} ${Boost_LIBRARIES})
